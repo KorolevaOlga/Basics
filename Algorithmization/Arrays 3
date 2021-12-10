@@ -1,0 +1,41 @@
+package Program;
+
+/* Дана матрица. Вывести k-ю строку и p-й столбец.
+
+С поправкой, что нумерация начинается с нуля для компьютера, а для пользователя - с 1.
+ */
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] a = new int[5][5];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            System.out.println((i + 1) + "-я строка матрицы: ");
+            for (int j = 0; j < 5; j++) {
+                a[i][j] = scanner.nextInt();
+
+            }
+        }
+        System.out.println("Введите номер строки (не более 5)");
+        int m = scanner.nextInt();
+        System.out.println("Введите номер столбца(не более 5)");
+        int n = scanner.nextInt();
+        System.out.println();
+        System.out.println("Искомый элемент:  ");
+
+        for (int i = 0; i < 6; i++) {
+            if (i == m) {
+                for (int j = 0; j < 6; j++) {
+                    if (j == n)
+                        System.out.print(a[i - 1][j - 1]);
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
