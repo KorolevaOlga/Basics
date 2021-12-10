@@ -1,0 +1,18 @@
+package Program;
+
+//Напишите программу, где пользователь вводит любое целое положительное число. А программа суммирует все числа от 1 до введенного пользователем числа.
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+        System.out.println(sum);
+    }
+}
