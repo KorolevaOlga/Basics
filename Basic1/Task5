@@ -1,0 +1,22 @@
+package Program;
+
+/* Дано натуральное число Т, которое представляет собой длительность прошедшего времени в секундах.
+Вывести данное значение длительности в часах, минутах, секундах в следующей форме: ННч ММмин SSс.
+*/
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double T = scanner.nextDouble();
+
+        int HH = (int) T / 360;
+        int MM = ((int) T - (HH * 360)) / 60;
+        int SS = ((int) T - (HH * 360)) % 60;
+
+        System.out.println(HH + "ч " + MM + "мин " + SS + "с");
+    }
+}
