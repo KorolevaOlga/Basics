@@ -1,0 +1,24 @@
+package Program;
+
+// Заданы размеры А, В прямоугольного отверстия и размеры x, y, z кирпича. Определить, пройдет ли кирпич через отверстие.
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int z = scanner.nextInt();
+
+        if (((x <= A || x <= B) && (y <= A || y <= B)) || ((z <= A || z <= B) && (y <= A || y <= B))) {
+            System.out.println("Пройдет");
+        } else {
+            System.out.println("Не пройдет");
+        }
+    }
+}
