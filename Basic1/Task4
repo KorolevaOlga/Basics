@@ -1,0 +1,20 @@
+package Program;
+
+/* Дано действительное число R вида nnn.ddd (три цифровых разряда в дробной и целой частях).
+Поменять местами дробную и целую часть местами.
+*/
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double x = scanner.nextDouble();
+
+
+        double y = (x * 1000) % 1000 + (int) x / 1000.0;
+        System.out.println(y);
+    }
+}
