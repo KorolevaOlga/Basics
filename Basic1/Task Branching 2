@@ -1,0 +1,70 @@
+package Program;
+
+// Найти max {min(a,b), min (c,d)}.
+
+// Вариант с ветвлением
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int c = scanner.nextInt();
+        int d = scanner.nextInt();
+
+        if (x < y && c < d) {
+            if (x > c) {
+                System.out.println(x);
+            } else {
+                System.out.println(c);
+            }
+            if (x > y && c < d) {
+                if (y > c) {
+                    System.out.println(y);
+                } else {
+                    System.out.println(c);
+                }
+                if (x < y && c > d) {
+                    if (x > d) {
+                        System.out.println(x);
+                    } else {
+                        System.out.println(d);
+                    }
+                    if (x > y && c > d) {
+                        if (y > d) {
+                            System.out.println(y);
+                        } else {
+                            System.out.println(d);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Вариант без ветвления
+
+package Program;
+
+        import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int c = scanner.nextInt();
+        int d = scanner.nextInt();
+
+        int max = Math.max((Math.min(x, y)), Math.min(c, d));
+
+
+        System.out.println(max);
+    }
+}
