@@ -1,0 +1,31 @@
+package Program;
+
+// Дана квадратная матрица. Вывести на экран элементы, стоящие по диагонали.
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] a = new int[5][5];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            System.out.println((i + 1) + "-я строка матрицы: ");
+            for (int j = 0; j < 5; j++) {
+                a[i][j] = scanner.nextInt();
+            }
+        }
+        System.out.println();
+        System.out.println("Элементы по диагонали:  ");
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(a[i++][j] + "\t");
+            }
+        }
+
+        System.out.println();
+    }
+
+}
