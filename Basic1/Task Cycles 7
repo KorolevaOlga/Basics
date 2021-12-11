@@ -1,0 +1,30 @@
+package Program;
+
+/* Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа.
+m и n вводится с клавиатуры.
+ */
+
+import java.util.Scanner;
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Введите интервал чисел - первое и последнее число");
+            int n = scanner.nextInt();
+            int m = scanner.nextInt();
+
+            for (int i = n; i <= m;i++) {
+
+                String res = i + " делители: ";
+                for (int j = 2; j < m; j++)
+                    if (i % j == 0 && i!= j) {
+                        res += j + " ";
+                    }
+                System.out.println(res);
+            }
+
+        }
+
+    }
