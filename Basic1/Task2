@@ -20,9 +20,6 @@ public class Main {
         double b2 = Math.pow(b, -2);
         double x = (b + q) / (2 * a) - a3 * c + b2;
 
-        System.out.println(b2);
-        System.out.println((b + q) / (2 * a));
-
         System.out.println(x);
     }
 }
