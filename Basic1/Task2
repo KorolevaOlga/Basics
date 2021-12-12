@@ -10,18 +10,20 @@ import java.lang.Math;
 
 public class Main {
 
-    public static void main(String[] args) {
-
+      public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double a = scanner.nextDouble();
         double b = scanner.nextDouble();
         double c = scanner.nextDouble();
         double q = Math.sqrt(Math.pow(b, 2) + 4 * a * c);
-        double a3 = Math.pow(a, 3);
+        double a3 = Math.pow(a, 3); 
         double b2 = Math.pow(b, -2);
-        double x = (b + q) / 2 * a - a3 * c + b2;
+        double x = (b + q) / (2 * a) - a3 * c + b2;
+
+        System.out.println(b2);
+        System.out.println((b + q) / (2 * a));
 
         System.out.println(x);
-
     }
 }
+
