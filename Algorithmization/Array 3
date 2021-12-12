@@ -1,0 +1,29 @@
+package Program;
+
+/* Дан массив действительных чисел, размерность которого N.
+Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов.
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int N = 8;
+        double[] array = {-45, 34, 12, 6, 78, 90, -25, 0};
+        int count_positive = 0;
+        int count_negative = 0;
+        int count_zero = 0;
+        for (int i = 0; i < N; i++) {
+            if (array[i] > 0) {
+                count_positive++;
+            } else if (array[i] < 0) {
+                count_negative++;
+            } else {
+                count_zero++;
+            }
+        }
+        System.out.println(count_positive);
+        System.out.println(count_negative);
+        System.out.println(count_zero);
+    }
+}
