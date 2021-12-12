@@ -1,0 +1,28 @@
+package Program;
+
+/* Дана последовательность действительных чисел a1, a2, an.
+ Заменить все ее члены, большие данного, этим числом. Подсчитать количество замен.
+*/
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        double[] array = {45, 34, 12, 6, 78, 90};
+        double k = 20;
+        double[] array2 = new double[array.length];
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] <= k) {
+                array2[i] = array[i];
+            } else {
+                array2[i] = k;
+                count++;
+            }
+        }
+        System.out.println(Arrays.toString(array2));
+        System.out.println(count);
+    }
+}
