@@ -1,0 +1,21 @@
+package Program;
+
+//В массив A[N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] array = {45, 34, 12, 6, 78, 90};
+        int k = 2;
+
+        int sum = 0;
+
+        for (int j : array) {
+            if (j % k == 0) {
+                sum = sum + j;
+            }
+        }
+        System.out.println(sum);
+    }
+}
