@@ -1,0 +1,30 @@
+package Program;
+
+/*	Задана последовательность N вещественных чисел.
+Вычислить сумму чисел, порядковые номера которых являются простыми числами.
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+        int N = 12;
+        int[] array = {45, 34, 2, 11, 4, 90, 25, 0, 234, 32, 59, 89};
+
+        int sum = 0;
+        for (int i = 1; i < N; i++) {
+            int k = 0;
+            for (int j = 1; j <= i; j++) {
+
+                if (i % j == 0) {
+                    k++;
+                }
+            }
+            if (k <= 2) {
+                sum = sum + array[i];
+                System.out.println(array[i]);
+            }
+        }
+        System.out.println(sum);
+    }
+
+}
