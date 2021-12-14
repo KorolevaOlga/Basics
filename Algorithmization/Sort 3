@@ -1,0 +1,33 @@
+package Program;
+
+/* Сортировка выбором. Дана последовательность чисел a1 <= a2… <=an. Требуется переставить элементы так, чтобы они были расположены по убыванию. Для этого в массиве, начиная с первого, выбирается наибольший элемент и ставится на первое место, а первый - на место наибольшего.
+Затем, начиная со второго, эта процедура повторяется. Написать алгоритм сортировки выбором.
+ */
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] a = new int[]{2, 6, 76, 45, 1, 25, 7, 56};
+
+        for (int i = 0; i < a.length; i++) {
+            int pos = i;
+            int max = a[i];
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[j] > max) {
+                    pos = j;
+                    max = a[j];
+                }
+            }
+            a[pos] = a[i];
+            a[i] = max;
+        }
+        // или
+        // int temp = a[i];
+        // a[i] = max;
+        // a[pos] = temp;
+        System.out.println(Arrays.toString(a));
+    }
+}
