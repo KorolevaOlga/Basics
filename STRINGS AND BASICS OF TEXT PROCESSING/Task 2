@@ -1,0 +1,36 @@
+package Program;
+
+// Замените в строке все вхождения 'word' на 'letter'.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "Any word is just a word. Any word is just a word.";
+        String word = "word";
+        String letter = "letter";
+
+        String a = replaseWL(s, word, letter);
+        while (a.contains(word)){
+            a = replaseWL(a, word, letter);
+        }
+
+        System.out.println(a);
+    }
+
+
+    private static String replaseWL(String s, String word, String letter) {
+
+        String finale = "";
+
+        if (s.contains(word)) {
+            int start = s.indexOf(word);
+            int end = start + word.length();
+
+            finale += s.substring(0, start) + letter + s.substring(end);
+
+        }
+
+        return finale;
+    }
+}
