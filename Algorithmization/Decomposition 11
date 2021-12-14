@@ -1,0 +1,30 @@
+package Program;
+
+// Написать метод (методы), определяющий, в каком из данных 2 чисел больше цифр.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int X = 5689078;
+        int Y = 45637890;
+
+
+        System.out.println("Цифр больше в числе: " + (numbersLength(X, Y)));
+
+    }
+
+    private static int numbersLength(int X, int Y) {
+        String X_1 = String.valueOf(X);
+        int X_2 = X_1.length();
+        String Y_1 = String.valueOf(Y);
+        int Y_2 = Y_1.length();
+
+
+        if (X_2 > Y_2) {
+            return X;
+        } else {
+            return Y;
+        }
+    }
+}
