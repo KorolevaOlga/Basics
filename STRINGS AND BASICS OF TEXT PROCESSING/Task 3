@@ -1,0 +1,26 @@
+package Program;
+
+// В строке найти количество цифр.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "This year we have planted 15 sacks of potatoes.";
+        System.out.println(counter(s));
+    }
+
+
+    private static int counter(String s) {
+        char[] s_1 = s.toCharArray();
+
+        int count = 0;
+
+        for (int i = 0; i < s.length() - 1; i++) {
+            if (s_1[i] >= '0' && s_1[i] <= '9') {
+                count++;
+            }
+        }
+        return count;
+    }
+}
