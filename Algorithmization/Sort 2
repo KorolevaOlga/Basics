@@ -1,0 +1,42 @@
+package Program;
+
+/* Даны 2 последовательности a1 <= a2… <=an; b1 <= b2 …<= bm. Образовать из них новую последовательность чисел так, чтобы она тоже была неубывающей.
+Дополнительный массив не использовать.
+(прим. от меня - С использованием третьего массива, в котором идет сортировка.)
+ */
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] a = new int[]{2, 6, 76, 45, 1};
+        int[] b = new int[]{3, 6, 7};
+        int[] ab = new int[a.length + b.length];
+
+
+        for (int i = 0; i < b.length; i++) {
+            ab[i] = b[i];
+        }
+
+        for (int i = b.length; i < ab.length; i++) {
+            ab[i] = a[i - b.length];
+        }
+        System.out.println(Arrays.toString(ab));
+
+        for (int i = 0; i < ab.length; i++) {
+            for (int j = i + 1; j < ab.length; j++)
+                if (ab[i] > ab[j]) {
+                    int temp = ab[i];
+                    ab[i] = ab[j];
+                    ab[j] = temp;
+                }
+        }
+        System.out.println(Arrays.toString(ab));
+    }
+}
+
+
+
+
