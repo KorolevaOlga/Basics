@@ -1,0 +1,22 @@
+package Program;
+
+// Вычислить площадь правильного шестиугольника со стороной а, используя метод вычисления площади треугольника.
+
+import java.lang.Math;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        double a = 5;
+        double S = S_hexagone(a);
+
+        System.out.println("Площадь шестиугольника: " + S);
+
+    }
+
+    private static double S_hexagone(double a) {
+        return (Math.pow(a, 2) * Math.sqrt(3) /4 * 2);
+
+    }
+}
