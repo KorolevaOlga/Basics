@@ -1,0 +1,35 @@
+package Program;
+
+/* Заданы 2 одномерных массива с различным количеством элементов и натуральное число k.
+Объединить их в один массив, включив второй массив между k-м и (k + 1)-м элементами первого, при этом не используя дополнительный массив.
+(из пояснений форума - кроме того, в который будут объединены массивы).
+ */
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] a = new int[]{2, 6, 76, 45};
+        int[] b = new int[]{3, 6, 7};
+        int[] ab = new int[a.length + b.length];
+        int k = 2;
+        int count = 0;
+
+        for (int i = 0; i < ab.length; i++) {
+            if (i <= k) {
+                ab[i] = a[i];
+            }
+            else if (count <= k) {
+                ab[i] = b[count];
+                count++;
+            }
+            else {
+                ab[i] = a[i - k - 1];
+            }
+        }
+        System.out.println(Arrays.toString(ab));
+    }
+}
+
