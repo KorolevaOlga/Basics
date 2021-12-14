@@ -1,0 +1,44 @@
+package Program;
+
+/* В числовой матрице поменять местами любых 2 столбца, т.е. все элементы одного столбца поставить на соответствующие позиции другого, а его элементы переместить в первый.
+Номера столбцов вводит пользователь с клавиатуры.
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите номер первого столбца(не более 4)");
+        int m = scanner.nextInt();
+        System.out.println("Введите номер второго столбца(не более 4)");
+        int n = scanner.nextInt();
+
+
+        int [][] a = new int[5][5];
+
+        System.out.println("Исходная матрица: ");
+        for ( int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                a[i][j] = i + j;
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < 5; i++) {
+            int temp = a[i][m];
+            a[i][m] = a[i][n];
+            a[i][n] = temp;
+        }
+        System.out.println("Новая матрица: ");
+        for ( int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
