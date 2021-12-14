@@ -1,0 +1,65 @@
+package Program;
+
+/*  Написать программу, определяющую сумму n-значных чисел, содержащих только нечетные цифры.
+Определить также, сколько четных цифр в найденной сумме. Для решения задачи использовать декомпозицию.
+ */
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int a = 45;
+        int b = 60;
+
+        System.out.println(numbers(a, b));
+        System.out.println(even(numbers(a, b)));
+    }
+
+    private static int numbers(int x, int y) {
+        int sum = 0;
+        for (int i = x; i < y; i++) {
+
+            String s = String.valueOf(x);
+            int sl = s.length();
+            int[] array = new int[sl];
+            int j = 0;
+
+            for (int g = i; g > 0; g /= 10) { // выделяем цифры из числа в массив
+                array[j] = g % 10;
+                j++;
+            }
+            int count = 0;
+            for (int k = 0; k < sl; k++) {
+                if (array[k] % 2 == 0) {
+                    count++;
+                }
+            }
+            if (count == sl) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    private static int even(int n) {
+        String s = String.valueOf(n);
+        int sl = s.length();
+        int[] array = new int[sl];
+        int j = 0;
+
+        for (int g = n; g > 0; g /= 10) { // выделяем цифры из числа в массив
+            array[j] = g % 10;
+            j++;
+        }
+
+        int count = 0;
+        for (int k = 0; k < sl; k++) {
+            if (array[k] % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+
+    }
+}
