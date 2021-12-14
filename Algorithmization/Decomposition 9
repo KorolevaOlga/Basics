@@ -1,0 +1,34 @@
+package Program;
+
+/*Даны числа X, Y, Z, T - длины сторон четырехугольника.
+Написать метод (методы) вычисления его площади, если угол между сторонами длиной X и Y прямой.
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int X = 5;
+        int Y = 8;
+        int Z = 7;
+        int T = 11;
+        int Q = DL(X, Y);
+
+        double S_1 = P(X, Y);
+        double S_2 = S_2(T, Z, Q) ;
+        double result = S_1 + S_2;
+        System.out.println(result);
+
+    }
+
+    private static double P(double X, double Y) {
+        return (X * Y) / 2;
+    }
+    private static int DL(int X, int Y) {
+        return (int) Math.sqrt((Math.pow(X, 2) + Math.pow(Y, 2)));
+    }
+    private static double S_2(double a, double b, double c) {
+        double p = (a + b + c) / 2;
+        return  Math.sqrt(p * (p -a)* (p - b) * (p - c));
+    }
+}
