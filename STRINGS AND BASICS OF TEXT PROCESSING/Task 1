@@ -1,0 +1,32 @@
+package Program;
+
+// Дан массив названий переменных в camelCase. Преобразовать названия в snake_сase.
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        String[] mountains = new String[]{"MountEverest", "PicoCristobalColon", "MountLogan", "MountElbrus", "MontBlanc"};
+
+        for (int i = 0; i < mountains.length - 1; i++) {
+            System.out.println(camelSnake(mountains[i]));
+        }
+    }
+
+    public static String camelSnake(String s) {
+        String result = "";
+
+        char one = s.charAt(0);
+        result = result + Character.toLowerCase(one);
+        for (int i = 1; i < s.length(); i++) {
+            char str = s.charAt(i);
+
+            if (Character.isUpperCase(str)) {
+                result += result + '_' + Character.toLowerCase(str);
+            } else {
+                result = result + str;
+            }
+        }
+        return result;
+    }
+}
