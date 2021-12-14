@@ -1,0 +1,29 @@
+package Program;
+
+// Составить программу, которая в массиве A[N] находит второе по величине число (вывести на печать число, которое меньше максимального элемента массива, но больше всех других элементов).
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] A = {3, 56, 78, 7, 18, 92};
+
+        System.out.println(max_2(A, 6 ));
+    }
+    private static int max_2(int A[], int size) {
+        int max = A[0];
+        int max_2 = Integer.MIN_VALUE;
+
+        for (int i = 1; i < A.length; i++) {
+            if (A[i] > max)
+                max = A[i];
+        }
+        for (int i = 0; i < size; i++) {
+            if(A[i] > max_2 && A[i] < max) {
+                max_2 = A[i];
+            }
+        }
+        return max_2;
+    }
+
+}
