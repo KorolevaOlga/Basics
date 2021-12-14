@@ -1,0 +1,45 @@
+package Program;
+
+/* Задана матрица неотрицательных чисел. Посчитать сумму элементов в каждом столбце.
+Определить, какой столбец содержит максимальную сумму.
+ */
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] a = new int[5][5];
+
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                a[i][j] = i + j;
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int summax = 0;
+        int nummax = 0;
+
+        System.out.println("Суммы столбцов");
+        for (int i = 0; i < 5; i++) {
+            int sum = 0;
+            int num = 0;
+
+            for (int j = 0; j < 5; j++) {
+                sum += a[i][j];
+                num = j;
+            }
+            if (sum > summax) {
+                summax = sum;
+                nummax = num;
+
+            }
+            System.out.println(sum);
+        }
+
+        System.out.println("Столбец с максимальной суммой");
+        System.out.println(nummax);
+
+    }
+}
