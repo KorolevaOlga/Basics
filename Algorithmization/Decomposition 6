@@ -1,0 +1,44 @@
+package Program;
+
+// Написать метод (методы), проверяющий, являются ли данные 3 числа взаимно простыми.
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Введите первое число: ");
+        int n1 = in.nextInt();
+        System.out.println("Введите второе число: ");
+        int n2 = in.nextInt();
+        System.out.println("Введите третье число: ");
+        int n3 = in.nextInt();
+
+
+        int NOD_end = searchNOD((searchNOD(searchNOD(n1, n2), searchNOD(n2, n3))), searchNOD(searchNOD(n2, n3), searchNOD(n3, n1)));
+        
+        System.out.println(numbers(NOD_end));
+    }
+
+    private static int searchNOD(int n1, int n2) {
+        int NOD = 0;
+
+        while (n1 != 0 && n2 != 0) {
+
+            if (n1 > n2) {
+                n1 %= n2;
+            } else {
+                n2 %= n1;
+            }
+            NOD = n1 + n2;
+        }
+        return NOD;
+    }
+
+    private static boolean numbers(int NOD_end) {
+        return NOD_end == 1;
+    }
+}
