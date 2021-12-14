@@ -1,0 +1,56 @@
+package Program;
+
+// Даны дроби. p1/q1, p2/q2…., pn/qn. (pi и qi - натуральные). Составить программу, которая приводит эти дроби к общему знаменателю и упорядочивает их в порядке возрастания.
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] numerator = new int[]{1, 4, 7, 45};
+        int[] denominator = new int[]{2, 8, 15, 7};
+        System.out.println("Исходные дроби: ");
+        for (int i = 0; i < numerator.length; i++) {
+            System.out.println(numerator[i] + "\\" + denominator[i]);
+        }
+        int nok = 1;
+        for (int j = 0; j < denominator.length; j++) {
+            nok = nok * denominator[j];
+        }
+        System.out.println("HOK: " + nok);
+
+        for (int i = 0; i < numerator.length; i++) {
+            numerator[i] = nok / denominator[i] * numerator[i];
+            denominator[i] = nok;
+            System.out.println(numerator[i] + "\\" + denominator[i]);
+        }
+        System.out.println("Сокращенные дроби: ");
+        for (int i = 0; i < numerator.length; i++) {
+            for (int j = 2; j <= 7; j++) {
+                while (numerator[i] % j == 0 && denominator[i] % j == 0) {
+                    numerator[i] = numerator[i] / j;
+                    denominator[i] = denominator[i] / j;
+                }
+            }
+            System.out.println(numerator[i] + "\\" + denominator[i]);
+        }
+
+        System.out.println("Дроби в порядке возрастания: ");
+        for (int k = 0; k < numerator.length; k++) {
+            int min = numerator[k];
+            int min_k = k;
+            for (int i = k + 1; i < numerator.length; i++) {
+                if (numerator[i] < min) {
+                    min = numerator[i];
+                    min_k = i;
+                }
+            }
+            if (k != min_k) {
+                int tmp = numerator[k];
+                numerator[k] = numerator[min_k];
+                numerator[min_k] = tmp;
+            }
+            System.out.println(numerator[k] + "\\" + denominator[k]);
+        }
+    }
+}
