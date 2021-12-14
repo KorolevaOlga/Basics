@@ -1,0 +1,61 @@
+package Program;
+
+/* Два простых числа называются "близнецами", если они отличаются друг от друга на 2. Например, 41 и 43.
+ Найти и напечатать все пары "близнецов" из отрезка [n, 2n], где n - заданное натуральное число больше 2.
+ Для решения задачи использовать декомпозицию.
+ */
+
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int n = 15;
+        int n2 = 55;
+        int[] num = numbers(n, n2);
+        System.out.println(Arrays.toString(numbers(n, n2)));
+
+        for (int i = 0; i < num.length - 1; i++) {
+            for (int j = i + 1; j < num.length; j++) {
+                if (Math.abs(num[i] - num[j]) == 2) {
+                    System.out.println(num[i] + ", " + num[j]);
+                }
+            }
+        }
+    }
+
+    private static int[] numbers(int n, int n2) { //определяет простые числа из отрезка от n до n2
+
+        int[] numbers = new int[n2];
+        int d = 0;
+
+
+        for (int i = n; i < n2; i++) {
+            int k2 = 0;
+
+            for (int j = 1; j < i + 1; j++) {
+                if (i % j == 0) {
+                    k2++;
+                }
+            }
+            if (k2 == 2) {
+                numbers[i] = i;
+                d++;
+            }
+
+        }
+        int[] numbers2 = new int[d];
+
+        int j = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != 0) {
+                numbers2[j] = numbers[i];
+                j++;
+            }
+        }
+
+        return numbers2;
+    }
+}
