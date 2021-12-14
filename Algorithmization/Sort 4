@@ -1,0 +1,37 @@
+package Program;
+
+/* Сортировка обменами. Дана последовательность чисел a1 <= a2… <=an. Требуется переставить числа в порядке возрастания.
+Для этого сравниваются два соседних числа ai и ai+1. Если ai> ai + 1, то делается перестановка. Так продолжается до тех пор, пока все элементы не станут расположены в порядке возрастания.
+ Составить алгоритм сортировки, подсчитывая при этом количество перестановок.
+ */
+
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] a = new int[]{2, 6, 76, 45, 1, 25, 7, 56};
+
+        boolean sort = false;
+        int b;
+        int count = 0;
+
+        while (!sort) {
+            sort = true;
+            for (int i = 0; i < a.length - 1; i++) {
+                if (a[i] > a[i + 1]) {
+                    sort = false;
+
+                    b = a[i];
+                    a[i] = a[i + 1];
+                    a[i + 1] = b;
+                    count++;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(a));
+        System.out.println(count);
+    }
+}
