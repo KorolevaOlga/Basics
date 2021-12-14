@@ -1,0 +1,47 @@
+package Program;
+
+/* Написать метод (методы) для нахождения наибольшего делителя и наименьшего общего кратного двух натуральных чисел:
+НОК (А, В) = (A*B) / НОД(А, В)
+ */
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Введите первое число: ");
+        int n1 = in.nextInt();
+        System.out.println("Введите второе число: ");
+        int n2 = in.nextInt();
+
+        int NOD_end = searchNOD(n1, n2);
+        int NOK_end = searchNOK(NOD_end, n1, n2);
+
+        System.out.println("НОД чисел: " + NOD_end);
+        System.out.println("НОК чисел: " + NOK_end);
+
+    }
+    private static int searchNOD(int n1, int n2) {
+        int NOD = 0;
+
+        while (n1 !=0 && n2 != 0) {
+
+            if (n1 > n2) {
+                n1 %= n2;
+            } else {
+                n2 %= n1;
+            }
+            NOD = n1 + n2;
+        }
+
+        return NOD;
+    }
+
+    private static int searchNOK(int NOD_end, int n1, int n2) {
+        return (n1 * n2) / NOD_end;
+    }
+}
