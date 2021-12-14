@@ -1,0 +1,28 @@
+package Program;
+
+// В строке вставить после каждого символа 'a' символ 'b'.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        StringBuilder s = new StringBuilder("This year we have planted 15 sacks of potatoes.");
+        System.out.println(duplication(s));
+
+    }
+
+    private static StringBuilder duplication(StringBuilder s) {
+        StringBuilder a = new StringBuilder();
+
+        for (int i = 0; i < s.length() - 1; i++) {
+            if (s.charAt(i) == 'a') {
+                a.append(s.charAt(i));
+                a.append('b');
+            } else {
+                a.append(s.charAt(i));
+            }
+
+        }
+        return a;
+    }
+}
