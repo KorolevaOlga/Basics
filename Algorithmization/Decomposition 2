@@ -1,0 +1,44 @@
+package Program;
+
+// Написать метод (методы) для нахождения наибольшего общего делителя четырех натуральных чисел.
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Введите первое число: ");
+        int n1 = in.nextInt();
+        System.out.println("Введите второе число: ");
+        int n2 = in.nextInt();
+        System.out.println("Введите третье число: ");
+        int n3 = in.nextInt();
+        System.out.println("Введите четвертое число: ");
+        int n4 = in.nextInt();
+
+        int NOD_end = searchNOD(searchNOD(n1, n2), searchNOD(n3, n4));
+
+
+        System.out.println("НОД чисел: " + NOD_end);
+
+    }
+
+    private static int searchNOD(int n1, int n2) {
+        int NOD = 0;
+
+        while (n1 != 0 && n2 != 0) {
+
+            if (n1 > n2) {
+                n1 %= n2;
+            } else {
+                n2 %= n1;
+            }
+            NOD = n1 + n2;
+        }
+
+        return NOD;
+    }
+}
