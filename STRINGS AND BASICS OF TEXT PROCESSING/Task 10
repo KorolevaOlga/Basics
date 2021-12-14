@@ -1,0 +1,26 @@
+package Program;
+
+// Подсчитать, сколько раз среди символов заданной строки встречается буква "а".
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "This year we have planted 15 sacks of potatoes.";
+        System.out.println(counter(s));
+
+    }
+
+
+    private static int counter(String s) {
+        char[] s_1 = s.toCharArray();
+        int d = 0;
+
+        for (int i = 0; i < s.length() - 1; i++) {
+            if (s_1[i] == 'a') {
+                d++;
+            }
+        }
+        return d;
+    }
+}
