@@ -1,0 +1,35 @@
+package Program;
+
+// Удалить в строке все лишние пробелы, то есть серии подряд идущих пробелов заменить на одиночные пробелы.
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "This year we have    planted 15 sacks of    potatoes.";
+        System.out.println(counter(s));
+
+        String a = counter(s);
+        while (a.contains("  ")){
+            a = counter(a);
+        }
+
+        System.out.println(a);
+    }
+
+
+    private static String counter(String s) {
+
+        String finale = "";
+
+        if (s.contains("  ")) {
+            int start = s.indexOf("  ");
+            int end = start + "  ".length();
+
+            finale += s.substring(0, start) + " " + s.substring(end);
+
+        }
+
+        return finale;
+    }
+}
