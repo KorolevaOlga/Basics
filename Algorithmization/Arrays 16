@@ -1,0 +1,51 @@
+package Program;
+
+/* Магическим квадратом порядка n называется квадратная матрица n x n, составленная из чисел 1,2,3,….n2 так, что суммы по каждому столбцу, каждой строке и каждой из 2-х больших диагоналей равны между собой.
+Построить такой квадрат. Пример магического квадрата порядка 3:
+6 1 8
+7 5 3
+2 9 4
+ */
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int n = 3;
+        int[][] a = new int[n][n];
+
+        int number = 1;
+        int r = 0;
+        int c = n / 2;
+        int curr_r;
+        int curr_c;
+        while (number <= n * n) {
+            a[r][c] = number;
+            number++;
+            curr_r = r;
+            curr_c = c;
+            r -= 1;
+            c += 1;
+            if (r == -1) {
+                r = n - 1;
+            }
+            if (c == n) {
+                c = 0;
+            }
+            if (a[r][c] != 0) {
+                r = curr_r + 1;
+                c = curr_c;
+                if (r == -1) {
+                    r = n - 1;
+                }
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
