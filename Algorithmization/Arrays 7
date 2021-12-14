@@ -1,0 +1,32 @@
+package Program;
+
+import java.util.Arrays;
+
+/* Сформировать квадратную матрицу порядка N по правилу и подсчитать количество положительных элементов в ней.
+A [i, j] = sin((Math.pow(i, 2) - Math.pow(j, 2)) / n)
+ */
+public class Main {
+
+    public static void main(String[] args) {
+
+        int n = 5;
+
+
+        double[][] a = new double[n][n];
+
+        int count = 0;
+
+        for (double i = 0; i < n; i++) {
+            for (double j = 0; j < n; j++) {
+                a[(int) i][(int) j] = Math.sin(((Math.pow(i, 2) - Math.pow(j, 2)) / n));
+                if (a[(int) i][(int) j] > 0) {
+                    count += 1;
+                }
+
+            }
+            System.out.println(Arrays.toString(a[(int) i]));
+        }
+
+        System.out.println(count);
+    }
+}
