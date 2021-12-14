@@ -1,0 +1,33 @@
+package Program;
+
+/* В массиве целых чисел с  количеством элементов n найти наиболее часто встречающееся число.
+Если таких чисел несколько, то определить наименьшее из них.
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] array = {45, 4, 6, 6, 11, 4, 4, 6, 0, 234, 6, 4, 89};
+        int countmax = 0;
+        int num = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            int count = 1;
+
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    count++;
+                }
+            }
+            if (countmax < count) {
+                countmax = count;
+                num = array[i];
+            } else if (count == countmax) {
+                num = Math.min(num, array[i]);
+            }
+        }
+        System.out.println(countmax + " раза встречается число " + num);
+    }
+
+}
