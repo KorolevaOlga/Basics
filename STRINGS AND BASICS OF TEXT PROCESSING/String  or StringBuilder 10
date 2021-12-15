@@ -1,0 +1,38 @@
+package Program;
+
+/* Строка Х состоит из нескольких предложений, каждое из которых кончается точкой, восклицательным или вопросительным знаком.
+Определить количество предложений в строке Х.
+ */
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the string");
+        String X = scan.nextLine();
+        System.out.println("Количество предложений в тексте: " + text(X));
+
+
+    }
+
+    private static int text(String s) {
+        int count = 0;
+
+        char[] c = s.toCharArray();
+
+        for (int i = 0; i < s.length(); i++) {
+            if (c[i] == '.' || c[i] == '!' || c[i] == '?') {
+                count++;
+            }
+
+        }
+
+
+        return count;
+    }
+
+}
