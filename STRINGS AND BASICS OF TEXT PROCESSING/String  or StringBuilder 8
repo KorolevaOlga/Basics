@@ -1,0 +1,54 @@
+package Program;
+
+/* Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран.
+Случай, когда самых длинных слов несколько, можно не обрабатывать.
+ */
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the string");
+        String s = scan.nextLine();
+        System.out.println("Самое длинное слово: " + wordsLength(s));
+
+    }
+
+    private static String wordsLength(String s) {
+        int count = 0;
+
+        char[] c = s.toCharArray();
+
+        for (int i = 0; i < s.length(); i++) {
+            if (c[i] == ' ') {
+                count++;
+            }
+        }
+        String temp = "";
+        int k = 0;
+        String[] result = new String[count + 1];
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] == ' ') {
+                result[k++] = temp;
+                temp = "";
+            } else {
+                temp = temp + c[i];
+            }
+
+        }
+        result[k] = temp;
+        String f = "";
+
+        for (int i = 1; i < result.length; i++) {
+            if (result[i].length() > result[i - 1].length()) {
+                f = result[i];
+            }
+        }
+
+        return f;
+    }
+}
