@@ -1,0 +1,169 @@
+package Program;
+
+/* Создать приложение, разбирающее текст (текст хранится в строке) и позволяющее выполнять с текстом 3 различных операции:
+отсортировать абзацы по количеству предложений; в каждом предложении отсортировать слова по длине;
+отсортировать лексемы в предложении по убыванию количества вхождений заданного символа, а в случае равенства - по алфавиту.
+ */
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String text = "There were once a man and a woman who had long, in vain, wished for a child. At length it appeared that. God was about to grant their desire.\n" +
+                "\n" +
+                "These people had a little window at the back of their house from which a splendid garden could be seen, which was full of the most beautiful flowers and herbs. It was, however, surrounded by a high wall, and no one dared to go into it because it belonged to an enchantress, who had great power and was dreaded by all the world.";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(text);
+        System.out.println("Для сортировки абзацев по количеству предложений введите 1;\n" + "\n" +
+                "Для сортировки слов в предложениях по длине введите 2;\n" + "\n" +
+                "Для сортировки слов в предложениях по количеству вхождения заданного символа (а в случае равенства - по алфавиту), введите 3\n" + "\n" +
+                "Для завершения работы введите 4");
+
+        String user = "";
+
+        while (!user.equals("4")) {
+            System.out.println("Выберите операцию и введите ее цифру: ");
+            user = scanner.nextLine();
+            switch (user) {
+                case "1":
+                    sortParagraph(text);
+                    break;
+
+                case "2":
+                    sortWord(text);
+                    break;
+
+                case "3":
+                    sortLetters(text);
+                    break;
+                case "4":
+                    System.out.println("Завершение программы");
+                    break;
+            }
+        }
+
+
+
+    }
+
+    private static void sortParagraph(String s) {// разделяем на абзацы и сортируем
+        Pattern paragraph = Pattern.compile("\\s*[\n\r]+");
+        Pattern sentence = Pattern.compile("[\\.\\!\\?]+");
+
+        String[] resParagraph = paragraph.split(s);
+
+        int[] count1 = new int[resParagraph.length];
+        int max = 0;
+
+        for (int i = 0; i < resParagraph.length; i++) {
+            String[] resSentence = sentence.split(resParagraph[i]); //сохраняем в массив поделенные на предложения абзацы
+            count1[i] = resSentence.length;
+            if (resSentence.length > max) {
+                max = resSentence.length;
+            }
+        }
+
+        for (int i = 1; i <= max; i++) {
+            for (int j = 0; j < count1.length; j++) {
+                if (i == count1[j]) {
+                    System.out.println(resParagraph[j]);
+                }
+            }
+        }
+
+        System.out.println();
+
+
+    }
+
+    private static void sortWord(String s) {
+        Pattern sentence = Pattern.compile("[\\.\\!\\?]+");
+        Pattern word = Pattern.compile("\\s*(\\s|,|!|\\.)\\s*");
+
+        String[] sentences = sentence.split(s);
+
+
+        for (int i = 0; i < sentences.length; i++) { // проходим по массиву предложений
+            String[] words = word.split(sentences[i]); //массив со словами из текущего предложения
+
+            for (int j = words.length - 1; j >= 0; j--) {
+                for (int k = 0; k < j; k++) {
+                    if (words[k].length() > words[k + 1].length()) {
+                        String tmp = words[k];
+                        words[k] = words[k + 1];
+                        words[k + 1] = tmp;
+                    }
+                }
+
+            }
+            for (int j = 0; j < words.length; j++) {
+                if (j < words.length - 1) {
+                    System.out.print(words[j] + " ");
+                } else {
+                    System.out.print(words[j] + ".");
+                }
+            }
+            System.out.println();
+        }
+
+    }
+
+    private static void sortLetters(String s) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите английскую букву: ");
+        String lex = scanner.nextLine();
+
+        Pattern sentence = Pattern.compile("[\\.\\!\\?]+");
+        Pattern word = Pattern.compile("\\s*(\\s|,|!|\\.)\\s*");
+
+        String[] sentences = sentence.split(s);
+
+
+        for (int i = 0; i < sentences.length; i++) { // проходим по массиву предложений
+            String[] words = word.split(sentences[i]); //массив со словами из текущего предложения
+
+
+            for (int j = words.length - 1; j >= 0; j--) {
+                for (int k = 0; k < j; k++) {
+
+                    int count1 = 0;
+                    int count2 = 0;
+
+                    for (int g = 0; g < words[k].length(); g++) {
+                        if (String.valueOf(words[k].charAt(g)).compareToIgnoreCase(lex) == 0) {
+                            count1++;
+                        }
+                    }
+                    for (int l = 0; l < words[k + 1].length(); l++) {
+                        if (String.valueOf(words[k + 1].charAt(l)).compareToIgnoreCase(lex) == 0) {
+                            count2++;
+                        }
+                    }
+                    if (count1 < count2) {
+                        String tmp = words[k];
+                        words[k] = words[k + 1];
+                        words[k + 1] = tmp;
+                    } else if (count1 == count2) {
+                        String[] sorting = {words[k], words[k + 1]};
+                        Arrays.sort(sorting);
+                        words[k] = sorting[0];
+                        words[k + 1] = sorting[1];
+                    }
+                }
+            }
+            for (int j = 0; j < words.length; j++) {
+                if(j < words.length - 1) {
+                    System.out.print(words[j] + " ");
+                }else{
+                    System.out.print(words[j] + ". ");
+                }
+            }
+            System.out.println();
+        }
+
+    }
+}
