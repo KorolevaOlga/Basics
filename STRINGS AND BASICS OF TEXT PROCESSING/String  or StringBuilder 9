@@ -1,0 +1,53 @@
+package Program;
+
+/* Посчитать количество строчных (маленьких) и прописных (больших) букв во введенной строке.
+Учитывать только английские буквы.
+ */
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the string");
+        String s = scan.nextLine();
+        System.out.println("Количество строчных букв: " + letters_A(s));
+        System.out.println("Количество прописных букв: " + letters_a(s));
+
+    }
+
+    private static int letters_a(String s) {
+        int count = 0;
+
+        char[] c = s.toCharArray();
+
+        for (int i = 0; i < s.length(); i++) {
+            if (c[i] >= 'a' && c[i] <= 'z') {
+                count++;
+            }
+
+        }
+
+
+        return count;
+    }
+
+    private static int letters_A(String s) {
+        int count = 0;
+
+        char[] c = s.toCharArray();
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (c[i] >= 'A' && c[i] <= 'Z') {
+                count++;
+            }
+        }
+
+
+        return count;
+    }
+}
