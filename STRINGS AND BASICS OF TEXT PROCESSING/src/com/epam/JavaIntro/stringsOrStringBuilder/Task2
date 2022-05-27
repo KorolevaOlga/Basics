@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.stringsOrStringBuilder;
 
 // В строке вставить после каждого символа 'a' символ 'b'.
 
