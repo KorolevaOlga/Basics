@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.decomposition;
 
 //Написать метод(методы) для вычисления суммы факториалов всех нечетных чисел от 1 до 9.
 
