@@ -1,4 +1,4 @@
-package Program.Account;
+package com.epam.JavaIntro.Account.bean;
 
 import java.util.*;
 
@@ -6,6 +6,8 @@ public class Client {
     String name;
     ArrayList<Account> accounts;
 
+    public Client() {
+    }
 
     public Client(String name, ArrayList<Account> accounts) {
         this.name = name;
@@ -76,6 +78,21 @@ public class Client {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static Comparator<Account> getSortSum() {
+        return sortSum;
+    }
+
+    public static void setSortSum(Comparator<Account> sortSum) {
+        Client.sortSum = sortSum;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -105,5 +122,3 @@ public class Client {
                 '}';
     }
 }
-
-
