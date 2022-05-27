@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.cucles;
 
 /* Даны 2 числа. Определить цифры, входящие в запись как первого числа, так и второго числа.
  */
