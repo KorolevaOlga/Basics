@@ -1,4 +1,4 @@
-package com.epam.JavaIntro;
+package com.epam.JavaIntro.arrays;
 
 //В массив A[N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
 
