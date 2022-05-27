@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.task;
+package com.epam.JavaIntro.branching;
 
 // Даны 3 точки А(х1, у1), В(х2, у2), С (х3, у3). Определить, будут ли они расположены на одной прямой.
 
