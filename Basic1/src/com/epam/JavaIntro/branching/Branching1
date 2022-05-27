@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.task;
+package com.epam.JavaIntro.branching;
 
 // Даны 2 угла треугольника (в градусах). Определить, существует ли такой треугольник, и если да, то будет ли он прямоугольным.
 
