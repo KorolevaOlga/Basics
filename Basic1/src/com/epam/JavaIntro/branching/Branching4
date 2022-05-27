@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.task;
+package com.epam.JavaIntro.branching;
 
 // Заданы размеры А, В прямоугольного отверстия и размеры x, y, z кирпича. Определить, пройдет ли кирпич через отверстие.
 
