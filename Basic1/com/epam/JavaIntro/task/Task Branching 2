@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.task;
 
 // Найти max {min(a,b), min (c,d)}.
 
