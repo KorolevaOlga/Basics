@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.stringsOrStringBuilder;
 
 // С помощью функции копирования и операции конкатенации составить из частей слова "информатика" слово "торт".
 
