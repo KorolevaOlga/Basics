@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.task;
+package com.epam.JavaIntro.branching;
 
 // Найти max {min(a,b), min (c,d)}.
 
