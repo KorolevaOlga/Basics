@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.arrays;
 
 //Даны действительные числа а1,а2, … an. Поменять местами наибольший и наименьший элементы.
 
