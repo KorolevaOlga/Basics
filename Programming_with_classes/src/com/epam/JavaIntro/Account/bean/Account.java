@@ -1,4 +1,4 @@
-package Program.Account;
+package com.epam.JavaIntro.Account.bean;
 
 import java.util.Objects;
 
@@ -15,6 +15,9 @@ public class Account {
     double amount;
     Status status;
 
+    public Account() {
+    }
+
     public Account (String owner, String dateOpening, String numberAccount, double amount, Status status) {
         this.owner = owner;
         this.dateOpening = dateOpening;
@@ -25,6 +28,14 @@ public class Account {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     @Override
@@ -40,6 +51,7 @@ public class Account {
         return Objects.hash(owner, dateOpening, numberAccount, amount, status);
     }
     @Override
+    
     public String toString() {
         return
                 "Владелец: " + owner +
