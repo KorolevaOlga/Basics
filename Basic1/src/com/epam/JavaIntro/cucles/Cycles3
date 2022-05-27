@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.cucles;
 
 //Найти сумму квадратов первых ста чисел
 
