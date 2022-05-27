@@ -1,4 +1,5 @@
-package Program;
+package com.epam.JavaIntro.arrays;
+
 
 // Найти положительные элементы главной диагонали квадратной матрицы.
 
