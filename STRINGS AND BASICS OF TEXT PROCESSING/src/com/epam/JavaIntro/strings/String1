@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.strings;
 
 // Дан массив названий переменных в camelCase. Преобразовать названия в snake_сase.
 
