@@ -1,4 +1,5 @@
-package Program;
+package com.epam.JavaIntro.arrays;
+
 
 // Дана квадратная матрица. Вывести на экран элементы, стоящие по диагонали.
 
