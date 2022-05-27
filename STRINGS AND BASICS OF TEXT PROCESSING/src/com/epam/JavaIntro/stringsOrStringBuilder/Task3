@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.stringsOrStringBuilder;
 
 // Проверить, является ли заданное слово палиндромом.
 
