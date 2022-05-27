@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.decomposition;
 
 // Написать метод (методы), проверяющий, являются ли данные 3 числа взаимно простыми.
 
