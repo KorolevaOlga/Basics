@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.task;
+package com.epam.JavaIntro.branching;
 
 /* Вычислить значение функции:
 F(x) = {(x2 - 3x + 9,если x <= 3
