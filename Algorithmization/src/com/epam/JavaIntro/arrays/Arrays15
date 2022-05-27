@@ -1,4 +1,5 @@
-package Program;
+package com.epam.JavaIntro.arrays;
+
 
 //Найдите наибольший элемент матрицы и замените все нечетные элементы на него.
 
