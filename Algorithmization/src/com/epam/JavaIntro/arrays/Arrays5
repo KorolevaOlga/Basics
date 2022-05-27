@@ -1,4 +1,5 @@
-package Program;
+package com.epam.JavaIntro.arrays;
+
 
 /* Сформировать квадратную матрицу порядка n по заданному образцу (n-четное).
 1 1 1 1 ... 1 1
