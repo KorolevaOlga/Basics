@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.stringsOrStringBuilder;
 
 // Из заданной строки получить новую, повторив каждый символ дважды.
 
