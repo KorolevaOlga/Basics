@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.task;
 
 /* Вычислить значение выражения по формуле (все переменные принимают действительные значения):
 ((sin x + cos y)/(cos x-sin y)) *tg xy
