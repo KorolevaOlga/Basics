@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.task;
 
 // Задание 1. Найдите значение функции: z = ((a - 3) * b / 2) + c
 
