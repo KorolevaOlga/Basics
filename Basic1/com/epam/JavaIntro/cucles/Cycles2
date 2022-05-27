@@ -1,4 +1,4 @@
-package Program;
+package com.epam.JavaIntro.cucles;
 
 /* Вычислить значения функции на отрезке [a, b] с шагом h:
 y= {(x,x>2
