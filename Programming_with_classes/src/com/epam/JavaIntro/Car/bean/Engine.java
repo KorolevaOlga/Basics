@@ -1,4 +1,4 @@
-package Program.Car;
+package com.epam.JavaIntro.Car.bean;
 
 import java.util.Objects;
 
