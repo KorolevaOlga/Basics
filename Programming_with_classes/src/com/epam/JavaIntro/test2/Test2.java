@@ -1,4 +1,4 @@
-package ProgramClasses;
+package com.epam.JavaIntro.test2;
 
 public class Test2 {
     private int one;
