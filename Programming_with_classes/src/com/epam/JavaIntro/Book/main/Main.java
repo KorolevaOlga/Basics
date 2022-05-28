@@ -35,7 +35,7 @@ public class Main {
         System.out.println();
 
         System.out.println("Книги заданного издательства: ");
-        List<Book> publishingHousesInfo = books.publishingHouses("АСТ");
+        List<Book> publishingHousesInfo = books.publishing("АСТ");
         for(Book b: publishingHousesInfo){
             System.out.println(b);
         }
