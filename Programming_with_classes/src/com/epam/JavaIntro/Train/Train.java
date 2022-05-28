@@ -1,4 +1,4 @@
-package Program.Train1;
+package package com.epam.JavaIntro.Train;
 
 
 import java.util.Objects;
