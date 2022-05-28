@@ -1,4 +1,6 @@
-package Customer;
+package com.epam.JavaIntro.Customer;
+
+import java.util.Objects;
 
 public class Customer {
     {
@@ -8,8 +10,15 @@ public class Customer {
     private static int startId = 0;
     private int id = startId;
 
-    private String surname, name, patronymic, address;
-    private int numberCard, numberBankAccount;
+    private String surname;
+    private String name;
+    private String patronymic;
+    private String address;
+    private int numberCard;
+    private int numberBankAccount;
+
+    public Customer() {
+    }
 
     public Customer(String surname, String name, String patronymic, String address, int numberCard, int numberBankAccount) {
         this.surname = surname;
@@ -18,7 +27,6 @@ public class Customer {
         this.address = address;
         this.numberCard = numberCard;
         this.numberBankAccount = numberBankAccount;
-
     }
 
     public String toString() {
@@ -76,5 +84,17 @@ public class Customer {
         return numberBankAccount;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Customer)) return false;
+        Customer customer = (Customer) o;
+        return id == customer.id && getNumberCard() == customer.getNumberCard() && getNumberBankAccount() == customer.getNumberBankAccount() && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getName(), customer.getName()) && Objects.equals(getPatronymic(), customer.getPatronymic()) && Objects.equals(getAddress(), customer.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, getSurname(), getName(), getPatronymic(), getAddress(), getNumberCard(), getNumberBankAccount());
+    }
 }
 
