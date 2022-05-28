@@ -1,3 +1,4 @@
+package com.epam.JavaIntro.Triangle;
 
 import java.util.Objects;
 
