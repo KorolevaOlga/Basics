@@ -2,10 +2,10 @@ pacage com.epam.JavaIntro.Travel;
 
 import java.util.ArrayList;
 
-import Program.Travel.TravelVoucher.TravelType;
-import Program.Travel.TravelVoucher.Country;
-import Program.Travel.TravelVoucher.Transport;
-import Program.Travel.TravelVoucher.FoodType;
+import com.epam.JavaIntro.Travel.TravelVoucher.TravelType;
+import com.epam.JavaIntro.Travel.TravelVoucher.Country;
+import com.epam.JavaIntro.Travel.TravelVoucher.Transport;
+import com.epam.JavaIntro.Travel.TravelVoucher.FoodType;
 
 
 public class Main {
