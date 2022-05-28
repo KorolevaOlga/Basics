@@ -1,4 +1,4 @@
-package Program.Triangle;
+package com.epam.JavaIntro.Triangle;
 
 public class Main {
 
