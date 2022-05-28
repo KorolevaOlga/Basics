@@ -1,4 +1,4 @@
-package Program.Text;
+package com.epam.JavaIntro.Text.bean;
 
 import java.util.Objects;
 
