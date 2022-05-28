@@ -1,4 +1,4 @@
-package Program.Airline;
+package com.epam.JavaIntro.Airline.bean;
 
 import java.util.ArrayList;
 import java.util.List;
