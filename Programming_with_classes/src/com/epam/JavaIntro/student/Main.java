@@ -1,4 +1,4 @@
-package Program.student;
+package com.epam.JavaIntro.student;
 
 
 public class Main {
