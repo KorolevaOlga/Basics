@@ -1,4 +1,4 @@
-package Program.Time;
+package com.epam.JavaIntro.Time;
 
 import java.util.Objects;
 
