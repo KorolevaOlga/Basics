@@ -1,4 +1,4 @@
-package Customer;
+package com.epam.JavaIntro.Customer;
 
 import java.util.*;
 
@@ -30,5 +30,6 @@ public class Customers {
        return sorting;
     }
 }
+
 
 
