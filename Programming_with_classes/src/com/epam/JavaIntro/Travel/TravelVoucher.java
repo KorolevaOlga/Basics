@@ -1,4 +1,4 @@
-package Program.Travel;
+package com.epam.JavaIntro.Travel;
 
 import java.util.Comparator;
 import java.util.Objects;
