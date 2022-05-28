@@ -19,19 +19,17 @@ public class Main {
         second.value();
 
         for (int i = 0; i < 10; i++) {
-            second.Increase();
+            second.increase();
         }
         System.out.println("Актуальные данные счетчика");
         second.myInfo();
 
         for (int i = 0; i < 10; i++) {
-            first.Decrease();
+            first.decrease();
         }
         System.out.println("Актуальные данные счетчика");
         first.myInfo();
     }
-
-
 }
 
 
