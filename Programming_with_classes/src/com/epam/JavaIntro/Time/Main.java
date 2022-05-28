@@ -14,20 +14,20 @@ public class Main {
 
 
         System.out.println("Текущее значение часов: ");
-        watch.MyInfo();
+        watch.myInfo();
 
-        www.MyInfo();
+        www.myInfo();
 
         watch.setHours(35);
         watch.setMinutes(25);
         watch.setSeconds(15);
 
-        watch.MyInfo();
+        watch.myInfo();
 
         watch.changeHours(45);
         watch.changeMinutes(65);
         watch.changeSeconds(15);
 
-        watch.MyInfo();
+        watch.myInfo();
     }
 }
