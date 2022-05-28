@@ -1,4 +1,4 @@
-package Program.Count;
+package com.epam.JavaIntro.Count;
 
 import java.util.Objects;
 
