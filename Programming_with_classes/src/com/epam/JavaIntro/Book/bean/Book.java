@@ -1,5 +1,6 @@
-package Book;
+package com.epam.JavaIntro.Book.bean;
 
+import java.util.Objects;
 
 public class Book {
     {
@@ -16,6 +17,9 @@ public class Book {
     private int countPage;
     private double price;
     private String bindingType;
+
+    public Book() {
+    }
 
     public Book(String title, String author, String publishingHouse, int year, int countPage, double price, String bindingType) {
         this.title = title;
@@ -93,5 +97,19 @@ public class Book {
     public String getBindingType() {
         return bindingType;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return id == book.id && getYear() == book.getYear() && getCountPage() == book.getCountPage() && Double.compare(book.getPrice(), getPrice()) == 0 && Objects.equals(getTitle(), book.getTitle()) && Objects.equals(getAuthor(), book.getAuthor()) && Objects.equals(getPublishingHouse(), book.getPublishingHouse()) && Objects.equals(getBindingType(), book.getBindingType());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, getTitle(), getAuthor(), getPublishingHouse(), getYear(), getCountPage(), getPrice(), getBindingType());
+    }
 }
+
 
