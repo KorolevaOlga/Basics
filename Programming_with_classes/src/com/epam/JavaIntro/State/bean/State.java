@@ -1,4 +1,4 @@
-package Program.State;
+package com.epam.JavaIntro.State.bean;
 
 import java.util.ArrayList;
 import java.util.Objects;
