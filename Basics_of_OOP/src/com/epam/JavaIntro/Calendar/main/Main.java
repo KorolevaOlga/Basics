@@ -1,4 +1,4 @@
-package Calendar;
+package com.epam.JavaIntro.Calendar.main;
 
 import java.util.ArrayList;
 import java.util.List;
