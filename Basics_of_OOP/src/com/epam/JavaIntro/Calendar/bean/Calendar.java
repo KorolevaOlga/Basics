@@ -1,4 +1,4 @@
-package Calendar;
+package com.epam.JavaIntro.Calendar.bean;
 
 import java.util.List;
 import java.util.Objects;
