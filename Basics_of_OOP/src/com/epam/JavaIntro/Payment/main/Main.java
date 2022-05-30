@@ -1,4 +1,4 @@
-package Payment;
+package com.epam.JavaIntro.Payment.main;
 
 import Payment.Payment.Product;
 
