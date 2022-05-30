@@ -1,6 +1,6 @@
 package com.epam.JavaIntro.Payment.main;
 
-import Payment.Payment.Product;
+import com.epam.JavaIntro.Payment.Product;
 
 import java.util.ArrayList;
 
