@@ -1,4 +1,4 @@
-package Payment;
+package com.epam.JavaIntro.Payment.bean;
 
 import java.text.DecimalFormat;
 import java.util.List;
