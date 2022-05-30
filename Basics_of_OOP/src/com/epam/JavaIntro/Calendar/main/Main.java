@@ -1,5 +1,7 @@
 package com.epam.JavaIntro.Calendar.main;
 
+//Создать класс календарь с внутренним классом, с помощью объектов которого можно хранить информацию о выходных и праздничных днях.
+
 import java.util.ArrayList;
 import java.util.List;
 
