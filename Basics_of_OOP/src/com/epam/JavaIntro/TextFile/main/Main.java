@@ -1,4 +1,4 @@
-package TextFile;
+package com.epam.JavaIntro.TextFile.main;
 
 import java.util.ArrayList;
 
