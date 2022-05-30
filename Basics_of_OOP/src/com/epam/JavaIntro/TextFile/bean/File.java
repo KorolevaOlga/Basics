@@ -1,4 +1,4 @@
-package TextFile;
+package com.epam.JavaIntro.TextFile.bean;
 
 import java.util.Objects;
 
