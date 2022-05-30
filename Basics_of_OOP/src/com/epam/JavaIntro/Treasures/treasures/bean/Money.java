@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.Treasures.bean;
+package com.epam.JavaIntro.Treasures.treasures.bean;
 
 import java.util.Objects;
 
