@@ -1,4 +1,4 @@
-package treasures;
+package com.epam.JavaIntro.Treasures.shopTreasure;
 
 import java.util.ArrayList;
 import java.util.List;
