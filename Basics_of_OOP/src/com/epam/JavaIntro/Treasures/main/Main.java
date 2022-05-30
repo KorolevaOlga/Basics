@@ -1,4 +1,4 @@
-package treasures;
+package com.epam.JavaIntro.Treasures.main;
 
 import java.util.Scanner;
 
