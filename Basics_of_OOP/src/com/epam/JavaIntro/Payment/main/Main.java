@@ -1,5 +1,7 @@
 package com.epam.JavaIntro.Payment.main;
 
+//Создать класс Payment с внутренним классом, с помощью объектов которого можно сформировать покупку из нескольких товаров. 
+
 import com.epam.JavaIntro.Payment.Product;
 
 import java.util.ArrayList;
