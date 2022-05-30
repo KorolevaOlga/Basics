@@ -1,4 +1,4 @@
-package treasures;
+package com.epam.JavaIntro.Treasures.cave;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
