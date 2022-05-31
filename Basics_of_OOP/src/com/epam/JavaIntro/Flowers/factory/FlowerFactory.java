@@ -1,7 +1,7 @@
 package com.epam.JavaIntro.Flowers.factory;
 
-import package com.epam.JavaIntro.Flowers.factory.Flower.NameFlower;
-import package com.epam.JavaIntro.Flowers.factory.Flower.Color;
+import com.epam.JavaIntro.Flowers.factory.Flower.NameFlower;
+import com.epam.JavaIntro.Flowers.factory.Flower.Color;
 
 public class FlowerFactory {
 
