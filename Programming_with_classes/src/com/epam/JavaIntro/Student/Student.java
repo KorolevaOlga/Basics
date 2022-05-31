@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.student;
+package com.epam.JavaIntro.Student;
 
 import java.util.Arrays;
 import java.util.Objects;
