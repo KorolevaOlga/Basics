@@ -1,0 +1,51 @@
+package com.epam.JavaIntro.stringsOrStringBuilder;
+
+// Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde def", то должно быть выведено "abcdef".
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the string");
+        String s = new String(scan.nextLine());
+        System.out.println(duplication(s));
+
+    }
+
+    private static String duplication(String s) {
+        StringBuilder a = new StringBuilder();
+        char[] chars = s.toCharArray();
+
+        int position = 1;
+
+        for (int i = 1; i < s.length(); i++) {
+            int j;
+            for (j = 0; j < position; ++j) {
+                if (chars[i] == chars[j]) {
+                    break;
+                }
+            }
+                if (j == position) {
+                    chars[position] = chars[i];
+                    ++position;
+                } else {
+                    chars[position] = 0;
+                    ++position;
+                }
+            }
+        return createString(chars);
+    }
+
+    public static String createString(char[] chars) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < chars.length; i++) {
+            stringBuilder.append(chars[i]);
+        }
+        return stringBuilder.toString();
+    }
+
+}
