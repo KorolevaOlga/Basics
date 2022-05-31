@@ -1,4 +1,4 @@
-package flovers.flowers.src.Program;
+package com.epam.JavaIntro.Flowers.bean;
 
 import java.util.ArrayList;
 import java.util.List;
