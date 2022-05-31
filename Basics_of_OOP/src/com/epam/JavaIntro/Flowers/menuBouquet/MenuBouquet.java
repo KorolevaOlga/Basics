@@ -1,4 +1,4 @@
-package flovers.flowers.src.Program;
+package com.epam.JavaIntro.Flowers.menuBouquet;
 
 import java.util.Scanner;
 
