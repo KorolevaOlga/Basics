@@ -1,4 +1,4 @@
-package Program;
+package package com.epam.JavaIntro.Flowers.factory;
 
 import java.util.Scanner;
 
