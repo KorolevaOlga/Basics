@@ -1,4 +1,4 @@
-package com.epam.JavaIntro.Count;
+package com.epam.JavaIntro.Count.bean;
 
 import java.util.Objects;
 
